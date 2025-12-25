@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %} Home Page {% endblock %}
+
+{% block content %}
+    <h4> Hello from flask server !! </h4><br>
+    <a href="/login"> Log In </a><br>
+    <a href="{{url_for('login')}}"> Log In (2) </a>
+
+    <p> Name: {{name}} </p>
+    <p> Age : {{old}} </p>
+    <ul> 
+        {% for item in list %}
+          <li {% if item>50 %}style="color:blue"{% endif%}> score: {{item}}</li>  
+        {% endfor %}
+    </ul>
+
+    <img src="/img/images.png", alt="Text"/> 
+
+{% endblock %}
+
